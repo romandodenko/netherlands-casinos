@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ 
+<symbol id="arrow-btn" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1 1L12.5 9L23.5 1" stroke-width="2" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="kk" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.25 3.25L3.53125 3.53125M10 1L5.5 5.5L5.21875 5.21875" stroke="#167B4B" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1 3.25L3.25 5.5L7.75 1" stroke="#167B4B" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="arrow" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1 7C0.447715 7 4.82823e-08 7.44772 0 8C-4.82823e-08 8.55228 0.447715 9 1 9L1 7ZM21.7071 8.70711C22.0976 8.31658 22.0976 7.68342 21.7071 7.2929L15.3431 0.928933C14.9526 0.538409 14.3195 0.538409 13.9289 0.928933C13.5384 1.31946 13.5384 1.95262 13.9289 2.34315L19.5858 8L13.9289 13.6569C13.5384 14.0474 13.5384 14.6805 13.9289 15.0711C14.3195 15.4616 14.9526 15.4616 15.3431 15.0711L21.7071 8.70711ZM1 9L21 9L21 7L1 7L1 9Z" fill="white"/>
+</symbol>
+
+<symbol id="exit" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <line x1="1.70711" y1="1" x2="15" y2="14.2929" stroke-linecap="round"/>
+  <line x1="0.5" y1="-0.5" x2="19.299" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 15 1)" stroke-linecap="round"/>
+</symbol>
+ 
+</svg>
