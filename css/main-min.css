@@ -861,8 +861,14 @@ main:not(:last-child) {
 
 @media (max-width:550px) {
   .hero-item__bonus-number.hidden {
-    display: block
+    display: block;
+   
   }
+  .hero-item__bonus-number.hidden span{
+    font-weight: 500;
+    font-family: "Noto Sans", sans-serif;
+  }
+
 }
 
 .hero-item__middle-list {
