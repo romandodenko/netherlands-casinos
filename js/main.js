@@ -308,7 +308,6 @@ function windowLoad() {
 
   if (document.body.clientWidth > 551) {
     heroItemMiddle.forEach(function (e) {
-      console.log(e.querySelector(".hero-item__rate"))
       if (e.querySelector(".hero-item__rate")) {
         e.style.paddingTop = 16 + "px";
       }
@@ -318,4 +317,39 @@ function windowLoad() {
       e.style.paddingTop = 8 + "px";
     })
   }
+
+  let popupTimer, timeOut = 4000;
+  let flag = true;
+
+  function displayPopup() {
+    if (flag) {
+      document.querySelector(".popup").classList.add("active")
+    }
+  }
+
+  popupTimer = setTimeout(displayPopup, timeOut);
+
+  window.addEventListener("scroll", function (e) {
+    clearTimeout(popupTimer);
+    popupTimer = setTimeout(displayPopup, timeOut);
+  })
+  document.addEventListener("click", function (e) {
+    const elementTarget = e.target;
+    if (elementTarget.closest(".popup__close") || elementTarget.closest(".popup__exit")) {
+      flag = false;
+      clearTimeout(popupTimer);
+      document.querySelector(".popup").classList.remove("active")
+    }
+
+    if (elementTarget) {
+      clearTimeout(popupTimer);
+      popupTimer = setTimeout(displayPopup, timeOut);
+    }
+  });
+
+  document.addEventListener("mouseover", function () {
+    clearTimeout(popupTimer);
+    popupTimer = setTimeout(displayPopup, timeOut);
+  })
+
 };
