@@ -6,6 +6,17 @@ function windowLoad() {
   document.addEventListener("click", function (e) {
 
     const elementInteractive = e.target;
+ 
+    if (elementInteractive.closest(".header__wrapper-flag")) {
+      elementInteractive.closest(".header__wrapper-flag").classList.toggle("active");
+    }
+
+    if (!elementInteractive.closest(".header__wrapper-flag")) {
+      document.querySelectorAll(".header__wrapper-flag").forEach(function(e) {
+        e.classList.remove("active");
+      })  
+    }
+
 
     if (elementInteractive.closest(".popup__close")) {
       document.querySelectorAll(".popup").forEach(function (e) {
@@ -192,6 +203,7 @@ function windowLoad() {
 
       // Перекидывание
       let heroItemBottomitem = e.querySelector(".hero-item__bottom-item");
+      let heroItemBottomWrapperrtp = e.querySelector(".hero-item__bottom-wrapperrtp");
       let heroItemMiddle = e.querySelector(".hero-item__middle");
       let heroItemRight = e.querySelector(".hero-item__right");
       let heroItemPays = e.querySelector(".hero-item__pays");
@@ -204,7 +216,10 @@ function windowLoad() {
       }
 
       if (document.body.clientWidth < 551) {
-        heroItemBottomitem.append(heroItemMiddleList);
+        if(heroItemBottomWrapperrtp) {
+          heroItemBottomWrapperrtp.append(heroItemMiddleList); 
+        }
+         
         heroItemMiddle.append(heroItemRating);
         heroItemRight.append(heroItemMiddleContent);
       }
